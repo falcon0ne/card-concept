@@ -1,7 +1,7 @@
-// const MomentLocalesPlugin = require('moment-locales-webpack-plugin');
-
-// vue.config.js
 module.exports = {
+  publicPath: process.env.NODE_ENV === 'production'
+    ? 'card-concept'
+    : '/',
   devServer: {
     open: process.platform === 'darwin',
     host: '0.0.0.0',
@@ -15,11 +15,6 @@ module.exports = {
     }
   },
   configureWebpack: {
-    // plugins: [
-    //   new MomentLocalesPlugin({
-    //     localesToKeep: ['de_de'],
-    //   })
-    // ],
     devtool: 'source-map'
   },
   chainWebpack: config => {

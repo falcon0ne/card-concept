@@ -43,6 +43,9 @@ export default {
     return {
       offers
     }
+  },
+  created() {
+    document.title = 'Card Concept | Agentur-VIDA'
   }
 }
 </script>
